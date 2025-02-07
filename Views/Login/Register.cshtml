@@ -1,0 +1,138 @@
+@model PORTALFABIA.Models.RegisterViewModel
+@{
+    ViewData["Title"] = "Registro";
+}
+
+<style>
+    body {
+        background-color: #f5f5f5; /* Fondo suave */
+        font-family: 'Arial', sans-serif; /* Fuente moderna */
+    }
+    h2 {
+        color: #c8102e; /* Color rojo USMP */
+        text-align: center;
+        margin-bottom: 20px; /* Espaciado inferior */
+        font-size: 2.5rem; /* Tamaño de fuente más grande */
+        font-weight: bold; /* Negrita */
+    }
+
+    .registration-form {
+        border-radius: 8px; /* Bordes redondeados */
+        padding: 20px; /* Espaciado interno */
+        max-width: 100%; /* Ancho máximo del formulario */
+        margin: 20px auto; /* Centrando el formulario con margen superior */
+        transition: transform 0.2s ease; /* Transición suave al escalar */
+    }
+
+    .form-group {
+        margin-bottom: 15px; /* Espaciado entre grupos */
+    }
+
+    .form-group label {
+        font-weight: bold; /* Negrita para etiquetas */
+        color: #333; /* Color gris oscuro */
+    }
+
+    .form-control {
+        border: 2px solid #ddd; /* Borde gris claro */
+        border-radius: 4px; /* Esquinas redondeadas */
+        padding: 10px; /* Espaciado interno */
+        transition: border-color 0.3s ease; /* Transición suave */
+    }
+
+    .form-control:focus {
+        border-color: #c8102e; /* Borde rojo al enfocar */
+        box-shadow: 0 0 5px rgba(203, 16, 46, 0.5); /* Sombra al enfocar */
+    }
+
+    .btn-primary {
+        background-color: #c8102e; /* Fondo rojo */
+        border: none; /* Sin borde */
+        padding: 12px 20px; /* Espaciado interno */
+        font-weight: bold; /* Negrita en el texto del botón */
+        transition: background-color 0.3s ease; /* Transición suave */
+        border-radius: 4px; /* Esquinas redondeadas */
+    }
+
+    .btn-primary:hover {
+        background-color: #7b1e2c; /* Rojo más oscuro al pasar el ratón */
+    }
+
+    .text-danger {
+        color: #dc3545; /* Color rojo para mensajes de error */
+    }
+</style>
+
+<div class="mt-5 col-md-12">
+    <h2>Regístrate Aquí</h2>
+</div>
+
+<div class="registration-form container-fluid">
+    <form asp-controller="Login" asp-action="Register" method="post">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Número de Matrícula</label>
+                    <input asp-for="numMatricula" class="form-control" placeholder="Ingresa tu número de matrícula" />
+                    <span asp-validation-for="numMatricula" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input asp-for="Nombre" class="form-control" placeholder="Ingresa tu nombre" />
+                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label>Apellido Paterno</label>
+                    <input asp-for="apePat" class="form-control" placeholder="Ingresa tu Apellido Paterno" />
+                    <span asp-validation-for="apePat" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label>Apellido Materno</label>
+                    <input asp-for="apeMat" class="form-control" placeholder="Ingresa tu Apellido Materno" />
+                    <span asp-validation-for="apeMat" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label>Carrera</label>
+                    <select asp-for="CarreraId" class="form-control" asp-items="@(new SelectList(ViewBag.Carreras, "IdCarrera", "nomCarrera"))">
+                        <option value="">Seleccione una carrera</option>
+                    </select>
+                    <span asp-validation-for="CarreraId" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Correo</label>
+                    <input asp-for="Correo" class="form-control" placeholder="Ingresa tu correo" />
+                    <span asp-validation-for="Correo" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label>Edad</label>
+                    <input asp-for="Edad" class="form-control" placeholder="Ingresa tu edad" />
+                    <span asp-validation-for="Edad" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label>Celular</label>
+                    <input asp-for="Celular" class="form-control" placeholder="Ingresa tu celular" />
+                    <span asp-validation-for="Celular" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label>Contraseña</label>
+                    <input asp-for="Password" type="password" class="form-control" placeholder="Crea una contraseña" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label>Confirmar Contraseña</label>
+                    <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="Confirma tu contraseña" />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5 form-group text-center">
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
