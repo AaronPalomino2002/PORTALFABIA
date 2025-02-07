@@ -67,55 +67,7 @@
     </header>
 
     <div class="wrapper">
-        <aside id="sidebar">
-            <div class="d-flex">
-                <button id="toggle-btn" type="button">
-                    <i class="lni lni-menu"></i>
-                </button>
-            </div>
-            <ul class="sidebar-nav">
-                <li class="sidebar-item active">
-                    <a asp-area="" asp-controller="Home" asp-action="Index" class="sidebar-link">
-                        <div class="round-border bg-redusmp">
-                            <img alt="USMP FIA" class="img-fluid img-logo-usmp" src="~/images/home-icon.svg">
-                        </div>
-                        <span>Campañas</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a asp-area="" asp-controller="Inscripciones" asp-action="Index" class="sidebar-link">
-                        <div class="round-border bg-redusmp">
-                            <img alt="USMP FIA" class="img-fluid img-logo-usmp" src="~/images/calendario-icon.svg">
-                        </div>
-                        <span>Inscripciones</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a asp-area="" asp-controller="Certificados" asp-action="Index" class="sidebar-link">
-                        <div class="round-border bg-redusmp">
-                            <img alt="USMP FIA" class="img-fluid img-logo-usmp" src="~/images/certificate-icon.svg">
-                        </div>
-                        <span>Certificados</span>
-                    </a>
-                </li>
-                @* <li class="sidebar-item">
-                    <a href="" class="sidebar-link">
-                        <div class="round-border bg-redusmp">
-                            <img alt="USMP FIA" class="img-fluid img-logo-usmp" src="~/images/network-icon.svg">
-                        </div>
-                        <span>Comunidad</span>
-                    </a>
-                </li> *@
-                <li class="sidebar-item">
-                    <a asp-controller="Contacto" asp-action="Registro" class="sidebar-link">
-                        <div class="round-border bg-redusmp">
-                            <img alt="USMP FIA" class="img-fluid img-logo-usmp" src="~/images/contacto-icon.png">
-                        </div>
-                        <span>Contacto</span>
-                    </a>
-                </li>
-            </ul>
-        </aside>
+        
 
         <main role="main" class="pb-3">
             @RenderBody()

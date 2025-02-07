@@ -27,9 +27,7 @@ namespace PORTALFABIA.Controllers
             ViewData["CurrentDateTime"] = DateTime.Now.ToString("h:mm tt - d MMMM yyyy");
 
             // Llamada a la API usando la URL base configurada
-            var campanas = await _httpClient.GetFromJsonAsync<Campanas[]>($"{_apiBaseUrl}/Campanas");
-            ViewData["Campanas"] = campanas; // Pasar las campañas a la vista
-
+           
             return View();
         }
 

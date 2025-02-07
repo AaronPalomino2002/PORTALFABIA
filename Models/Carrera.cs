@@ -15,6 +15,6 @@ namespace PORTALFABIA.Models
         public long IdCarrera { get; set;}
         public string? nomCarrera {get; set;}
         public Facultad? Facultad { get; set; }
-
+        public ICollection<Alumno>? Alumnos { get; set; }
     }
 }

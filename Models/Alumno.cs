@@ -15,8 +15,7 @@ namespace PORTALFABIA.Models
     public int Edad { get; set; }
     public string? Celular { get; set; }
     public long CarreraId { get; set; }
-    [ForeignKey("CarreraId")]
-    public virtual Carrera? Carrera { get; set; }
+    public Carrera? Carrera { get; set; }
     public Login? Login { get; set; } // Relación con la tabla Login
 }
 
