@@ -15,7 +15,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm nav-bar-bgprimary border-bottom box-shadow">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm nav-bar-bgprimary border-bottom box-shadow fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
                     <img alt="USMP FIA" class="img-fluid img-logo-header" src="~/images/logo-header.png">
@@ -29,6 +29,21 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
+                    <ul class="navbar-nav me-auto ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link p-home__color-primary" asp-area="" asp-controller="Home" asp-action="About">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-home__color-primary" asp-area="" asp-controller="Home" asp-action="Contact">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-home__color-primary" asp-area="" asp-controller="Robotica" asp-action="Index">Robotica</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-home__color-primary" asp-area="" asp-controller="Home" asp-action="Servicios">Servicios</a>
+                    </li>
+                </ul>
+
                     @if (User.Identity.IsAuthenticated)
                         {
                             <div class="perfil-div">
