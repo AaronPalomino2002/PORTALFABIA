@@ -48,11 +48,11 @@
 }
 
 /**Responsive**/
-@media only screen and (min-width: 767px) and (max-width:991px) {
-  .carousel-caption{
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+  .carousel-caption {
     bottom: 370px;
   }
-  .carousel-caption p{
+  .carousel-caption p {
     width: 100%;
   }
 }
@@ -320,4 +320,18 @@ body {
   .containerscroll {
     height: auto;
   }
+}
+.bg-banner {
+  width: auto;
+  min-height: inherit; /* Ajusta según necesites */
+  background: url("/images/bannerFablab.png") no-repeat center center;
+  background-size: cover; /* Asegura que la imagen no se recorte */
+  background-color: #ffffff; /* Color de fondo en caso de que la imagen no cubra todo */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.bg-banner p {
+  color: #000; /* Asegura que el texto sea visible */
+  font-size: 18px; /* Ajusta el tamaño de fuente */
 }

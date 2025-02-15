@@ -40,6 +40,9 @@
                         <a class="nav-link p-home__color-primary" asp-area="" asp-controller="Robotica" asp-action="Index">Robotica</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link p-home__color-primary" asp-area="" asp-controller="Fablab" asp-action="Index">Fabricación Digital</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link p-home__color-primary" asp-area="" asp-controller="Home" asp-action="Servicios">Servicios</a>
                     </li>
                 </ul>
@@ -81,13 +84,11 @@
         </nav>
     </header>
 
-    <div class="wrapper">
-        
+   
 
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
-    </div>
 
     @* <footer class="border-top footer text-muted">
         <div class="container">

@@ -1,0 +1,90 @@
+
+    <section class="bg-banner margin-top-3em">
+        <div class="row justify-content-center">
+            <div class="col-6 col-sm-8 ms-5">
+                <h1 class="">Haz realidad tus ideas! en 3d</h1>
+                <br>
+                <p>Diseña e innova tus pensamientos</p>
+                <div class="row" >
+                        <div class="col-6">
+                            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#miModal"> Inscribete </button>
+
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-success">
+                                Mas Información
+                            </button>
+                        </div>
+                 
+                </div>
+            </div>
+        </div>
+        
+    </section>
+<!-- Modal -->
+<div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="modalTitulo" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitulo">Inscribete a nuestro Taller!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Formulario dentro del modal -->
+                <form method="post" action="/Fablab/Inscribir">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Apellidos</label>
+                        <input type="text" class="form-control" id="apellidos" name="apellidos" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombres</label>
+                        <input type="text" class="form-control" id="nombres" name="nombres" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Edad</label>
+                        <input type="email" class="form-control" id="edad" name="edad" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Distrito</label>
+                        <select class="form-control" id="mensaje" name="mensaje" rows="3" required>
+                            <option></option>
+                             <option>Lima</option>
+                              <option>La Molina</option>
+                               <option>Atte</option>
+                                <option>Santa Anita</option>
+                        </select>
+                    </div>
+                     <div class="mb-3">
+                        <label for="mensaje" class="form-label">Dias del taller</label>
+                        <select class="form-control" id="mensaje" name="mensaje" rows="3" required>
+                            <option></option>
+                             <option>Lunes - Sabados</option>
+                              <option>Martes-Jueves</option>
+                               <option>Miercoles - Viernes</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Horario Semanal</label>
+                        <select class="form-control" id="mensaje" name="mensaje" rows="3" required>
+                            <option></option>
+                             <option>9:00 - 10:30 am</option>
+                              <option>5:00 - 6:30 pm</option>
+                               <option>6:30pm - 8:00pm</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <h2>Te Esperamos! <3 </h2>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success">Enviar</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
