@@ -47,11 +47,11 @@
                     </li>
                 </ul>
 
-                    @if (User.Identity.IsAuthenticated)
+                  @if (User.Identity.IsAuthenticated)
                         {
                             <div class="perfil-div">
                                 <div class="img">
-                                    <img style="height: 40px;" src="~/images/personas/1.png" alt="Usuario">
+                                    <img style="height: 40px;" src="~/images/persona/1.png" alt="Usuario">
                                 </div>
                                 <div class="parrafo">
                                     <p class="mt-0 mb-0">@User.Identity.Name</p> <!-- Nombre del usuario -->
@@ -86,7 +86,7 @@
 
    
 
-        <main role="main" class="pb-3">
+        <main role="main" class="pb-3 margin-top-5em">
             @RenderBody()
         </main>
 

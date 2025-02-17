@@ -1,5 +1,6 @@
-
-    <section class="bg-banner margin-top-3em">
+@model PORTALFABIA.Models.RegistroFab
+    
+    <section class="bg-banner">
         <div class="row justify-content-center">
             <div class="col-6 col-sm-8 ms-5">
                 <h1 class="">Haz realidad tus ideas! en 3d</h1>
@@ -31,59 +32,58 @@
             </div>
             <div class="modal-body">
                 <!-- Formulario dentro del modal -->
-                <form method="post" action="/Fablab/Inscribir">
-                    <div class="mb-3">
-                        <label for="nombre" class="form-label">Apellidos</label>
-                        <input type="text" class="form-control" id="apellidos" name="apellidos" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="nombre" class="form-label">Nombres</label>
-                        <input type="text" class="form-control" id="nombres" name="nombres" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Edad</label>
-                        <input type="email" class="form-control" id="edad" name="edad" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="mensaje" class="form-label">Distrito</label>
-                        <select class="form-control" id="mensaje" name="mensaje" rows="3" required>
-                            <option></option>
-                             <option>Lima</option>
-                              <option>La Molina</option>
-                               <option>Atte</option>
-                                <option>Santa Anita</option>
-                        </select>
-                    </div>
-                     <div class="mb-3">
-                        <label for="mensaje" class="form-label">Dias del taller</label>
-                        <select class="form-control" id="mensaje" name="mensaje" rows="3" required>
-                            <option></option>
-                             <option>Lunes - Sabados</option>
-                              <option>Martes-Jueves</option>
-                               <option>Miercoles - Viernes</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="mensaje" class="form-label">Horario Semanal</label>
-                        <select class="form-control" id="mensaje" name="mensaje" rows="3" required>
-                            <option></option>
-                             <option>9:00 - 10:30 am</option>
-                              <option>5:00 - 6:30 pm</option>
-                               <option>6:30pm - 8:00pm</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <h2>Te Esperamos! <3 </h2>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-success">Enviar</button>
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                    </div>
-                </form>
+               <form asp-controller="Fablab" asp-action="Index" method="post">
+                <div class="mb-3">
+                    <label asp-for="Apellidos" class="form-label"></label>
+                    <input type="text" class="form-control" asp-for="Apellidos" required>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Nombre" class="form-label"></label>
+                    <input type="text" class="form-control" asp-for="Nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Correo" class="form-label"></label>
+                    <input type="email" class="form-control" asp-for="Correo" required>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Edad" class="form-label"></label>
+                    <input type="number" class="form-control" asp-for="Edad" required>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Distrito" class="form-label"></label>
+                    <select class="form-control" asp-for="Distrito" required>
+                        <option value="">Seleccione su Colegio de Distrito</option>
+                        <option value="Lima">Lima</option>
+                        <option value="La Molina">La Molina</option>
+                        <option value="Ate">Ate</option>
+                        <option value="Santa Anita">Santa Anita</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Semana" class="form-label"></label>
+                    <select class="form-control" asp-for="Semana" required>
+                        <option value=""></option>
+                        <option value="Lunes-Sabados">Lunes - Sábados</option>
+                        <option value="Martes-Jueves">Martes - Jueves</option>
+                        <option value="Miercoles-Viernes">Miércoles - Viernes</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Horario" class="form-label"></label>
+                    <select class="form-control" asp-for="Horario" required>
+                        <option value=""></option>
+                        <option value="9-10am">9:00 - 10:30 am</option>
+                        <option value="5-6:30pm">5:00 - 6:30 pm</option>
+                        <option value="6:30-8:00pm">6:30 pm - 8:00 pm</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Enviar</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </form>
+
+
             </div>
         </div>
     </div>

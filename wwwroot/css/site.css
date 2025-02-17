@@ -281,7 +281,7 @@ body {
 
 /* Estilo para el contenido desplegable */
 .dropdown-content {
-  display: none;
+  display: block;
   position: absolute;
   background-color: white;
   min-width: 160px;
@@ -334,4 +334,14 @@ body {
 .bg-banner p {
   color: #000; /* Asegura que el texto sea visible */
   font-size: 18px; /* Ajusta el tamaño de fuente */
+}
+.margin-top-5em {
+  margin-top: 0em;
+}
+
+.mt-5em {
+  margin-top: 6em;
+}
+.div-center {
+  justify-self: center;
 }
