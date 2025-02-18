@@ -19,4 +19,5 @@ public class ApplicationDbContext : IdentityDbContext
     public DbSet<PORTALFABIA.Models.Categoria> DataCategoria{ get;set;}
     public DbSet<PORTALFABIA.Models.SubCategoria> DataSubCategoria{ get;set;}
      public DbSet<PORTALFABIA.Models.RegistroFab> DataMatriculaFab{ get;set;}
+     public DbSet<PORTALFABIA.Models.RegistroRobotica> DataRobo{ get;set;}
 }
