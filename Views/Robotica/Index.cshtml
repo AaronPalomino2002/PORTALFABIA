@@ -1,67 +1,119 @@
 @model PORTALFABIA.Models.RegistroRobotica
 
-<section class="bg-banner text-center text-white d-flex align-items-center justify-content-center vh-100" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/banner.jpg') no-repeat center center/cover;">
+<section class="bg-banner text-center text-white d-flex align-items-center justify-content-center vh-100" 
+    style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/bannerRobo.jpg'); background-size: cover; background-position: center;">
     <div>
-        <h1 class="display-3 fw-bold">Bienvenido a nuestro Taller de Robótica</h1>
+        <h1 class="display-3 fw-bold">Bienvenido al laboratorio de Inteligencia Artificial y Robótica</h1>
         <p class="lead">Convierte tus ideas en realidad con innovación y tecnología 3D</p>
         <a href="#contenido" class="btn btn-outline-light btn-lg mt-3">Explora más</a>
     </div>
 </section>
 
+
+
 <section id="contenido" class="container py-5 text-center" style="background-color: #f8f9fa;">
-    <h2 class="mb-4">Diseña e innova con nosotros</h2>
-    <p class="text-muted">Aprende a construir, diseñar e innovar con nuestros talleres especializados.</p>
+    <h2 class="mb-4">¡Despierta tu creatividad e innova con nosotros!</h2>
+    <p class="text-muted">Explora, diseña y construye el futuro con nuestros talleres especializados. Convierte tus ideas en realidad y marca la diferencia. 🚀</p>
 </section>
 
-<section id="cursos" class="container py-5" style="background-color: #e9ecef;">
+<section id="cursos" class="container py-5" style="background-color: #FF8E38;">
     <h2 class="text-center mb-4">Nuestros Cursos</h2>
     <div class="row text-center">
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="card p-3">
-                <img src="/images/curso1.jpg" class="img-fluid rounded mb-3" style="width: 100%; height: 200px; object-fit: cover;" alt="Curso 1">
+                <img src="https://i.ytimg.com/vi/7OmRyY2ke6s/maxresdefault.jpg" class="img-fluid rounded mb-3" style="width: 100%; height: 300px; object-fit: cover;" alt="Curso 1">
                 <h4>Introducción a la Robótica</h4>
                 <p>Fundamentos de robótica y programación.</p>
                 <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal">Inscribirse</button>
-                <button class="btn btn-secondary" onclick="alert('Información detallada del curso')">Más info</button>
+                <button class="btn btn-secondary" onclick="mostrarInfo('robotica')">Más info</button>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="card p-3">
-                <img src="/images/curso2.jpg" class="img-fluid rounded mb-3" style="width: 100%; height: 200px; object-fit: cover;" alt="Curso 2">
-                <h4>Diseño e Impresión 3D</h4>
-                <p>Explora el mundo del diseño y la fabricación digital.</p>
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal">Inscribirse</button>
-                <button class="btn btn-secondary" onclick="alert('Información detallada del curso')">Más info</button>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card p-3">
-                <img src="/images/curso3.jpg" class="img-fluid rounded mb-3" style="width: 100%; height: 200px; object-fit: cover;" alt="Curso 3">
+                <img src="https://www.edsrobotics.com/wp-content/uploads/2021/10/robotica-educativa-que-es-1200x900.jpg" class="img-fluid rounded mb-3" style="width: 100%; height: 300px; object-fit: cover;" alt="Curso 3">
                 <h4>Automatización y Control</h4>
                 <p>Domina la automatización con Arduino y sensores.</p>
                 <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal">Inscribirse</button>
-                <button class="btn btn-secondary" onclick="alert('Información detallada del curso')">Más info</button>
+                <button class="btn btn-secondary" onclick="mostrarInfo('automatizacion')">Más info</button>
             </div>
         </div>
     </div>
 </section>
 
-<section id="proyectos" class="container py-5" style="background-color: #dee2e6;">
+<section id="horario" class="container py-5 text-center" style="background-color: #f8f9fa;">
+    <h2 class="mb-4">Horario de Cursos</h2>
+    <p class="text-muted">Consulta el horario para organizarte mejor y aprovechar al máximo nuestras clases.</p>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Hora/Día</th>
+                    <th scope="col">Lunes</th>
+                    <th scope="col">Martes</th>
+                    <th scope="col">Miércoles</th>
+                    <th scope="col">Jueves</th>
+                    <th scope="col">Viernes</th>
+                    <th scope="col">Sábado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">9:00 - 10:30 am</th>
+                    <td class="text-center">Curso A</td>
+                    <td class="text-center">Curso B</td>
+                    <td class="text-center">Curso A</td>
+                    <td class="text-center">Curso C</td>
+                    <td class="text-center">Curso D</td>
+                    <td class="text-center">Libre</td>
+                </tr>
+                <tr>
+                    <th scope="row">10:45 - 12:15 pm</th>
+                    <td class="text-center">Curso B</td>
+                    <td class="text-center">Curso A</td>
+                    <td class="text-center">Curso C</td>
+                    <td class="text-center">Curso D</td>
+                    <td class="text-center">Curso A</td>
+                    <td class="text-center">Libre</td>
+                </tr>
+                <tr>
+                    <th scope="row">5:00 - 6:30 pm</th>
+                    <td class="text-center">Curso C</td>
+                    <td class="text-center">Curso D</td>
+                    <td class="text-center">Curso A</td>
+                    <td class="text-center">Curso B</td>
+                    <td class="text-center">Curso A</td>
+                    <td class="text-center">Libre</td>
+                </tr>
+                <tr>
+                    <th scope="row">6:30 - 8:00 pm</th>
+                    <td class="text-center">Curso D</td>
+                    <td class="text-center">Curso A</td>
+                    <td class="text-center">Curso B</td>
+                    <td class="text-center">Curso C</td>
+                    <td class="text-center">Curso D</td>
+                    <td class="text-center">Libre</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section id="proyectos" class="container py-5" style="background-color: #FF8E38;">
     <h2 class="text-center mb-4">Nuestros Proyectos</h2>
     <div id="carouselProyectos" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="/images/proyecto1.jpg" class="d-block w-100" alt="Proyecto 1">
+                <img src="https://masterrobotica.umh.es/files/2018/11/GATOPORTADA.jpg" class="d-block w-100" alt="Proyecto 1">
                 <div class="carousel-caption d-none d-md-block">
-                    <h4>Robot Asistente</h4>
-                    <p>Un robot programado para asistencia en el hogar.</p>
+                    <h4>Gato Robot con Arduino</h4>
+                    <p>Un robot interactivo diseñado para simular los movimientos y comportamientos de un gato, controlado por Arduino.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="/images/proyecto2.jpg" class="d-block w-100" alt="Proyecto 2">
+                <img src="https://virushardrive.wordpress.com/wp-content/uploads/2016/08/wincy_full_front.jpg" class="d-block w-100" alt="Proyecto 2">
                 <div class="carousel-caption d-none d-md-block">
-                    <h4>Brazo Robótico</h4>
-                    <p>Desarrollo de un brazo mecánico automatizado.</p>
+                    <h4>Robot Araña con Arduino</h4>
+                    <p>Un robot autónomo con movimientos similares a los de una araña, diseñado utilizando Arduino para controlar sus patas y desplazamiento.</p>
                 </div>
             </div>
         </div>
@@ -76,13 +128,26 @@
     </div>
 </section>
 
-<section id="contacto" class="container py-5 text-center" style="background-color: #adb5bd;">
-    <h2 class="mb-4">Contáctanos</h2>
-    <p>Email: info@robotica.com | Teléfono: +51 987 654 321</p>
-    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal">Inscribirse</button>
+<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="infoModalLabel">Información del Curso</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body" id="infoModalBody">
+                <!-- Contenido dinámico -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="contacto" class="container py-5 text-center" style="background-color: #f8f9fa;">
+    <h2>Contáctanos</h2>
+    <p>¿Tienes alguna pregunta o necesitas más información? ¡Estamos aquí para ayudarte!</p>
+    <p>Puedes escribir al correo jimena_sihuincho@usmp.pe o contactarnos por WhatsApp</p>
 </section>
 
-<!-- Modal de Inscripción -->
 <div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="modalTitulo" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -91,21 +156,71 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <div class="modal-body">
-                <form asp-controller="Robotica" asp-action="Registrar" method="post">
+                @using (Html.BeginForm("Registrar", "Home", FormMethod.Post))
+                {
                     <div class="mb-3">
-                        <label asp-for="Apellidos" class="form-label">Apellidos</label>
-                        <input type="text" class="form-control" asp-for="Apellidos" required>
+                        <label for="nombreCompleto" class="form-label">Nombre Completo</label>
+                        <input type="text" class="form-control" id="nombreCompleto" name="NombreCompleto" required>
                     </div>
                     <div class="mb-3">
-                        <label asp-for="Nombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" asp-for="Nombre" required>
+                        <label for="correoElectronico" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="correoElectronico" name="CorreoElectronico" required>
                     </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-success">Enviar</button>
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Teléfono</label>
+                        <input type="tel" class="form-control" id="telefono" name="Telefono" required>
                     </div>
-                </form>
+                    <div class="mb-3">
+                        <label for="curso" class="form-label">Curso</label>
+                        <select class="form-select" id="curso" name="Curso" required>
+                            <option value="Introducción a la Robótica">Introducción a la Robótica</option>
+                            <option value="Automatización y Control">Automatización y Control</option>
+                        </select>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Inscribirse</button>
+                    </div>
+                }
             </div>
         </div>
     </div>
 </div>
+
+<!-- Botón de WhatsApp flotante -->
+<a href="https://wa.me/51991461554?text=¡Hola!%20Tengo%20una%20consulta%20sobre%20los%20cursos." 
+    target="_blank" class="whatsapp-button" aria-label="Contáctanos por WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 60px; height: 60px;">
+</a>
+
+<!-- Estilos para el botón de WhatsApp flotante -->
+<style>
+    .whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25d366;
+        border-radius: 50%;
+        padding: 10px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+    .whatsapp-button img {
+        width: 40px;
+        height: 40px;
+    }
+</style>
+
+
+<script>
+    function mostrarInfo(curso) {
+        let informacion;
+        if (curso === 'robotica') {
+            informacion = '<h5>Curso: Introducción a la Robótica</h5><p>Fundamentos de robótica, programación y construcción de modelos.</p>';
+        } else if (curso === 'automatizacion') {
+            informacion = '<h5>Curso: Automatización y Control</h5><p>Aprende a usar Arduino y sensores para automatización de procesos.</p>';
+        }
+        document.getElementById('infoModalBody').innerHTML = informacion;
+        var myModal = new bootstrap.Modal(document.getElementById('infoModal'));
+        myModal.show();
+    }
+</script>
