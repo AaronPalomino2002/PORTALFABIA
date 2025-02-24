@@ -1,0 +1,174 @@
+@{
+    ViewData["Nosotros"] = ViewData["Nosotros"];
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Nosotros"]</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        header {
+            background: #5a0000;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+            letter-spacing: 1px;
+        }
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 40px 0;
+        }
+        .section {
+            background: #fff;
+            padding: 50px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease-in-out;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+        }
+        h2 {
+            color: #2C3E50;
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border-left: 5px solid #2980B9;
+            padding-left: 15px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+        }
+        .team {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .team-member {
+            width: 280px;
+            background: #f0f4f8;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background: #2980B9;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s ease-in-out;
+        }
+        .btn:hover {
+            background: #1B6A91;
+        }
+        footer {
+            background: #2C3E50;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Innovación y Tecnología - USMP</h1>
+        <p>Transformando el futuro con soluciones tecnológicas avanzadas</p>
+    </header>
+    
+    <div class="container">
+        <div class="section">
+            <h2><i class="fas fa-info-circle"></i> Quiénes Somos</h2>
+            <p>@ViewData["Descripcion"]</p>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-bullseye"></i> Nuestra Misión</h2>
+            <p>Impulsar el desarrollo tecnológico y formar líderes en inteligencia artificial y robótica, promoviendo la innovación y la sostenibilidad.</p>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-eye"></i> Nuestra Visión</h2>
+            <p>Ser el referente en innovación tecnológica en América Latina, destacando en automatización y robótica aplicada para transformar industrias.</p>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-users"></i> Nuestro Equipo</h2>
+            <div class="team">
+                <div class="team-member">
+                    <img src="team1.jpg" alt="Dr. Juan Pérez">
+                    <h3>Dr. Juan Pérez</h3>
+                    <p>Director del Laboratorio</p>
+                </div>
+                <div class="team-member">
+                    <img src="team2.jpg" alt="Ing. María López">
+                    <h3>Ing. María López</h3>
+                    <p>Especialista en IA</p>
+                </div>
+                <div class="team-member">
+                    <img src="team3.jpg" alt="Ing. Carlos Gómez">
+                    <h3>Ing. Carlos Gómez</h3>
+                    <p>Experto en Robótica</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-robot"></i> Innovación & Desarrollo</h2>
+            <p>Colaboramos con el <strong>FabLab USMP</strong>, un espacio de vanguardia con tecnología avanzada para la fabricación de prototipos y soluciones disruptivas que transforman industrias.</p>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-users"></i> Únete a Nosotros</h2>
+            <p>Si eres estudiante de la <strong>USMP</strong> y te apasiona la tecnología, este es tu lugar. Participa en nuestros proyectos y revoluciona el futuro.</p>
+            <a href="#contacto" class="btn">Contáctanos</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Innovación y Tecnología - USMP | Desarrollando el Futuro</p>
+    </footer>
+</body>
+</html>
