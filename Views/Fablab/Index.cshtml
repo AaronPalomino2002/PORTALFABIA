@@ -1,5 +1,17 @@
 @model PORTALFABIA.Models.RegistroFab
-    
+
+
+<script>
+document.addEventListener("scroll", function() {
+    const bgSection = document.querySelector(".bg-robo3d");
+    const scrollPosition = window.scrollY;
+
+    // Mueve la imagen de fondo a la izquierda en función del desplazamiento de la página
+    bgSection.style.backgroundPosition = `${-scrollPosition * 0.1}px center`; // Ajusta el valor '0.1' para controlar el desplazamiento
+});
+
+
+</script>
     <section class="bg-banner">
         <div class="row justify-content-center">
             <div class="col-6 col-sm-8 ms-5">
@@ -21,6 +33,11 @@
             </div>
         </div>
         
+        <div class="col-md-6 text-center robot3d-container">
+    <img src="~/images/ROBOT3D.jpeg" class="img-fluid rounded robot3d-image" alt="Robot Impreso en 3D">
+</div>
+
+
     </section>
     @* <section class="bg-banner2">
         <video autoplay loop muted playsinline>
@@ -31,46 +48,43 @@
     </div>
     </section> *@
 <div class="py-5 bg-robo3d">
-        <div class="row align-items-center">
-            <!-- Características -->
-            <div class="col-md-3 ms-5">
-                <div class="mb-4 d-flex align-items-center bg-white card">
-                    <div class="feature-icon me-3">📠</div>
-                    <div>
-                        <h4>Impresoras innovadoras</h4>
-                        <p>Descubre lo último en impresión 3D para crear prototipos y diseños únicos.</p>
-                    </div>
-                </div>
-                <div class="mb-4 d-flex align-items-center bg-white">
-                    <div class="feature-icon me-3">📦</div>
-                    <div>
-                        <h4>Materiales sólidos y de calidad</h4>
-                        <p>Usamos los mejores materiales para garantizar resistencia y precisión.</p>
-                    </div>
+    <div class="row align-items-center">
+        <!-- Características -->
+        <div class="col-md-3 ms-5">
+            <div class="mb-4 d-flex align-items-center bg-white card">
+                <div class="feature-icon me-3">📠</div>
+                <div>
+                    <h4>Impresoras innovadoras</h4>
+                    <p>Descubre lo último en impresión 3D para crear prototipos y diseños únicos.</p>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="mb-4 d-flex align-items-center bg-white">
-                    <div class="feature-icon me-3">🛠️</div>
-                    <div>
-                        <h4>Servicio personalizado</h4>
-                        <p>Te guiamos en cada paso para que obtengas los mejores resultados.</p>
-                    </div>
-                </div>
-                <div class="mb-4 d-flex align-items-center bg-white">
-                    <div class="feature-icon me-3">🎓</div>
-                    <div>
-                        <h4>Asesoramiento de expertos</h4>
-                        <p>Recibe ayuda de especialistas en fabricación digital y robótica.</p>
-                    </div>
+            <div class="mb-4 d-flex align-items-center bg-white">
+                <div class="feature-icon me-3">📦</div>
+                <div>
+                    <h4>Materiales sólidos y de calidad</h4>
+                    <p>Usamos los mejores materiales para garantizar resistencia y precisión.</p>
                 </div>
             </div>
-            <!-- Imagen destacada -->
-            @* <div class="col-md-6 text-center">
-                <img src="~/images/ROBOT3D.jpeg" class="img-fluid rounded" alt="Robot Impreso en 3D">
-            </div> *@
+        </div>
+        <div class="col-md-3">
+            <div class="mb-4 d-flex align-items-center bg-white">
+                <div class="feature-icon me-3">🛠️</div>
+                <div>
+                    <h4>Servicio personalizado</h4>
+                    <p>Te guiamos en cada paso para que obtengas los mejores resultados.</p>
+                </div>
+            </div>
+            <div class="mb-4 d-flex align-items-center bg-white">
+                <div class="feature-icon me-3">🎓</div>
+                <div>
+                    <h4>Asesoramiento de expertos</h4>
+                    <p>Recibe ayuda de especialistas en fabricación digital y robótica.</p>
+                </div>
+            </div>
         </div>
     </div>
+</div>
+
 <!-- Modal -->
 <div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="modalTitulo" aria-hidden="true">
     <div class="modal-dialog">
