@@ -389,19 +389,19 @@ body {
 }
 
 .bg-robo3d {
-  background-image: url('/images/ROBOT3D.jpeg');
-  background-size: auto; /* Asegura que la imagen cubra todo el contenedor */
+  background-image: url("/images/ROBOT3D.jpeg");
+  background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
   background-position: center center; /* Centra la imagen de fondo */
   background-repeat: no-repeat;
   overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga del contenedor */
-  width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
-  height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
+  width: 110%; /* Asegura que el contenedor ocupe todo el ancho */
+  height: auto; /* Asegura que el contenedor ocupe toda la altura de la ventana */
   transition: background-position 0.3s ease;
+  align-content: center;
 }
 
-
-
 .card {
-  border: 1px solid #111;
+  border: 0.2px solid #111;
   border-radius: 10px;
+  background: lightsteelblue;
 }
